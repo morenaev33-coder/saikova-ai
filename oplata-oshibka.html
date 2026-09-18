@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Оплата не прошла — SAIKOVA.AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#100b1e;--panel:rgba(35,27,58,.55);--ink:#f6f1fb;--ink-dim:#bcb0d9;--ink-faint:#847aa3;
+--accent:#c3a6f7;--accent-2:#f7c6d9;--line:rgba(246,241,251,.10);--radius:20px}
+html,body{min-height:100%}
+body{background:
+ radial-gradient(1000px 700px at 15% -10%, rgba(195,166,247,.16), transparent 60%),
+ radial-gradient(800px 600px at 95% 10%, rgba(247,198,217,.10), transparent 60%), var(--bg);
+ color:var(--ink);font-family:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+ display:grid;place-items:center;padding:clamp(1.2rem,4vw,3rem);line-height:1.6}
+.card{width:100%;max-width:620px;background:var(--panel);border:1px solid var(--line);
+ border-radius:var(--radius);padding:clamp(1.6rem,4vw,2.8rem);backdrop-filter:blur(14px)}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.06em;
+ font-size:.95rem;margin-bottom:1.8rem;text-decoration:none;color:var(--ink)}
+.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent-2);display:block}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem}
+h1{font-size:clamp(1.6rem,4.4vw,2.3rem);line-height:1.15;font-weight:800;letter-spacing:-.02em;margin-bottom:1rem}
+p{color:var(--ink-dim);margin-bottom:1rem}
+ol{color:var(--ink-dim);margin:0 0 1.6rem 1.2rem}
+ol li{margin-bottom:.7rem;padding-left:.2rem}
+ol li b{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 1.7rem;
+ border-radius:100px;font:inherit;font-weight:700;font-size:.95rem;text-decoration:none;cursor:pointer;
+ border:1px solid transparent;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#a888ee);color:#1a1230;
+ box-shadow:0 10px 30px rgba(195,166,247,.28)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink);appearance:none}
+.row{display:flex;flex-wrap:wrap;gap:.7rem}
+.mark{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin-bottom:1.4rem;
+ border:1px solid var(--line);font-size:1.5rem}
+.mark.ok{background:rgba(195,166,247,.16)}
+.mark.no{background:rgba(247,198,217,.14)}
+.foot{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--line);
+ font-size:.8rem;color:var(--ink-faint)}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+</style></head><body><div class="card">
+<a class="brand" href="./index.html"><i></i>SAIKOVA.AI</a>
+
+<div class="mark no">↻</div>
+<p class="eyebrow">оплата не прошла</p>
+<h1>Платёж не завершился</h1>
+<p>Деньги не списались — банк отменил операцию. Чаще всего это лимит на интернет-платежи или не хватило средств на карте. Ничего страшного, попробуйте ещё раз.</p>
+<ol>
+  <li><b>Повторите оплату</b> — вернитесь на сайт и нажмите кнопку курса снова.</li>
+  <li><b>Попробуйте другой способ</b> — СБП, другую карту или оплату частями.</li>
+  <li><b>Напишите мне</b>, если не получается — выставлю счёт вручную.</li>
+</ol>
+<div class="row">
+  <a class="btn btn-primary" href="./index.html#exhibits">Попробовать снова</a>
+  <a class="btn btn-ghost" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Написать мне</a>
+</div>
+<p class="foot">Почта для связи: sajkovae670@gmail.com</p>
+</div></body></html>
