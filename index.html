@@ -628,6 +628,14 @@
   .flagship-list li{margin-bottom:.55rem;}
   .flagship-foot{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.1);}
   .flagship-cta{margin-top:1.4rem;}
+  .reviews-more{display:none;background:transparent;}
+  @media (max-width:820px){
+    .reviews-more{display:flex!important;width:100%;margin-top:.2rem;justify-content:center;
+      background:rgba(255,255,255,.04);border:1px solid var(--line-strong);color:var(--ink);
+      font-family:'JetBrains Mono',monospace;font-size:.85rem;letter-spacing:.04em;
+      padding:1.05rem 1.4rem;border-radius:999px;cursor:pointer;-webkit-appearance:none;appearance:none;}
+    .review-grid.is-collapsed .plaque.is-extra{display:none!important;}
+  }
   .flagship-foot .format{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;justify-content:flex-end;}
   .flagship-foot .format span{white-space:nowrap;}
   @media (max-width:820px){
@@ -812,7 +820,7 @@
     <div class="hero-copy">
     <div class="eyebrow">Частный музей искусственного интеллекта</div>
     <h1>Музей первых<br>ИИ‑доходов</h1>
-    <p class="lede">Меня зовут Екатерина Сайкова. Я освоила нейросети из дома в Оренбурге, с двумя детьми на руках — и с тех пор провела этим же путём <b>2 400+ учеников</b>. Здесь я собрала всё, что выводит человека от «я не умею» до <b>первых денег за 30 дней</b>. Дальше — только ваш шаг.</p>
+    <p class="lede">Меня зовут Екатерина Сайкова. Я освоила нейросети из дома, с двумя детьми на руках — и с тех пор провела этим же путём <b>2 400+ учеников</b>. Здесь я собрала всё, что выводит человека от «я не умею» до <b>первых денег за 30 дней</b>. Дальше — только ваш шаг.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#exhibits">Смотреть экспонаты</a>
       <a class="btn btn-ghost" href="#founder">Кто хранитель</a>
@@ -837,8 +845,8 @@
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span><em>2 400+</em> учеников ✦ первые деньги за <em>30 дней</em> ✦ из Оренбурга, из дома ✦ без опыта в ИИ ✦ возврат за <em>7 дней</em> ✦</span>
-    <span><em>2 400+</em> учеников ✦ первые деньги за <em>30 дней</em> ✦ из Оренбурга, из дома ✦ без опыта в ИИ ✦ возврат за <em>7 дней</em> ✦</span>
+    <span><em>2 400+</em> учеников ✦ первые деньги за <em>30 дней</em> ✦ из дома, между делами ✦ без опыта в ИИ ✦ возврат за <em>7 дней</em> ✦</span>
+    <span><em>2 400+</em> учеников ✦ первые деньги за <em>30 дней</em> ✦ из дома, между делами ✦ без опыта в ИИ ✦ возврат за <em>7 дней</em> ✦</span>
   </div>
 </div>
 
@@ -858,7 +866,7 @@
         <div class="stat"><b data-count="2400" data-suffix="+">0</b><span>учеников</span></div>
         <div class="stat"><b data-count="30" data-suffix="">0</b><span>дней до первого дохода</span></div>
         <div class="stat"><b data-count="2" data-suffix="">0</b><span>детей, работа из дома</span></div>
-        <div class="stat"><b>Оренбург</b><span>отсюда всё началось</span></div>
+        <div class="stat"><b>Из дома</b><span>без офиса и команды</span></div>
       </div>
     </div>
   </div>
@@ -997,8 +1005,9 @@
     <div class="plaque">
       <div class="stars">★★★★★</div>
       <p>«Главное — рядом человек, который сам всё это прошёл. Катя объясняет спокойно и не даёт бросить на середине.»</p>
-      <footer><span>Вероника, 28</span><span>декрет, Оренбург</span></footer>
+      <footer><span>Вероника, 28</span><span>в декрете</span></footer>
     </div>
+    <button class="btn btn-ghost reviews-more" id="reviewsMore" type="button" hidden>Показать все отзывы</button>
   </div>
 </section>
 
@@ -1184,6 +1193,19 @@
     progress.style.width = pct+'%';
   }, {passive:true});
 
+  window.addEventListener('touchmove', function(e){
+    var t=e.touches && e.touches[0]; if(!t) return;
+    document.documentElement.style.setProperty('--mx', t.clientX+'px');
+    document.documentElement.style.setProperty('--my', t.clientY+'px');
+    window.__ptr = {x:t.clientX, y:t.clientY, at:Date.now()};
+  }, {passive:true});
+  window.addEventListener('touchstart', function(e){
+    var t=e.touches && e.touches[0]; if(!t) return;
+    document.documentElement.style.setProperty('--mx', t.clientX+'px');
+    document.documentElement.style.setProperty('--my', t.clientY+'px');
+    window.__ptr = {x:t.clientX, y:t.clientY, at:Date.now()};
+  }, {passive:true});
+
   var cursorDot=document.getElementById('cursorDot'), cursorRing=document.getElementById('cursorRing');
   var mouseX=innerWidth/2, mouseY=innerHeight/2, ringX=mouseX, ringY=mouseY;
   window.addEventListener('pointermove', function(e){
@@ -1191,6 +1213,7 @@
     document.documentElement.style.setProperty('--mx', e.clientX+'px');
     document.documentElement.style.setProperty('--my', e.clientY+'px');
     cursorDot.style.left=e.clientX+'px'; cursorDot.style.top=e.clientY+'px';
+    window.__ptr = {x:e.clientX, y:e.clientY, at:Date.now()};
   }, {passive:true});
   (function ringLoop(){
     ringX += (mouseX-ringX)*.16;
@@ -1368,7 +1391,20 @@
   }
   function fStep(){
     fctx.clearRect(0,0,FW,FH);
+    var ptr = window.__ptr, pxr=null, pyr=null;
+    if(ptr && Date.now()-ptr.at < 2600){ pxr = ptr.x*DPR; pyr = ptr.y*DPR; }
+    var RAD = 130*DPR;
     flies.forEach(function(p){
+      if(pxr!==null && !reduced){
+        var dx = p.x - pxr, dy = p.y - pyr;
+        var d = Math.sqrt(dx*dx+dy*dy);
+        if(d > 0.5 && d < RAD){
+          var f = (1 - d/RAD) * 1.6 * DPR;
+          p.x += (dx/d)*f;
+          p.y += (dy/d)*f;
+          if(p.x < 0) p.x = 0; if(p.x > FW) p.x = FW;
+        }
+      }
       if(!reduced){
         p.y -= p.s*DPR;
         p.sway += p.swaySpeed;
@@ -1386,6 +1422,42 @@
     if(!reduced) requestAnimationFrame(fStep);
   }
   fResize(); fMake(); fStep();
+
+  /* ---------------- reviews collapse on phones ---------------- */
+  (function(){
+    var grid = document.querySelector('.review-grid');
+    var btn = document.getElementById('reviewsMore');
+    if(!grid || !btn) return;
+    var cards = grid.querySelectorAll('.plaque');
+    var KEEP = 4;
+    function apply(){
+      if(innerWidth <= 820){
+        btn.hidden = false;
+        if(!grid.dataset.expanded){
+          grid.classList.add('is-collapsed');
+          for(var i=KEEP;i<cards.length;i++) cards[i].classList.add('is-extra');
+          btn.textContent = 'Показать все отзывы ('+cards.length+')';
+        }
+      } else {
+        btn.hidden = true;
+        grid.classList.remove('is-collapsed');
+      }
+    }
+    btn.addEventListener('click', function(){
+      if(grid.classList.contains('is-collapsed')){
+        grid.classList.remove('is-collapsed');
+        grid.dataset.expanded='1';
+        btn.textContent = 'Свернуть отзывы';
+      } else {
+        grid.classList.add('is-collapsed');
+        delete grid.dataset.expanded;
+        btn.textContent = 'Показать все отзывы ('+cards.length+')';
+        var h=document.getElementById('reviews'); if(h) h.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+    apply();
+    window.addEventListener('resize', apply);
+  })();
   window.addEventListener('resize', function(){ fResize(); fMake(); if(reduced) fStep(); });
 
   /* ---------------- tilt for exhibits & plaques (pauses idle float) ---------------- */
