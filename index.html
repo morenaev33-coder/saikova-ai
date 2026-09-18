@@ -352,13 +352,14 @@
   @keyframes scan{0%{top:6%;}100%{top:94%;}}
   .founder-copy p + p{margin-top:1rem;}
   .stat-row{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    display:grid;grid-template-columns:repeat(4,1fr);
     gap:1px;background:var(--line);
     border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:2.2rem;
   }
   .stat{background:var(--panel);backdrop-filter:blur(10px);padding:1.2rem 1.1rem;}
-  .stat b{display:block;font-family:'Unbounded',sans-serif;font-size:1.5rem;color:var(--accent-2);margin-bottom:.2rem;font-variant-numeric:tabular-nums;}
+  .stat b{display:block;font-family:'Unbounded',sans-serif;font-size:1.16rem;line-height:1.15;color:var(--accent-2);margin-bottom:.2rem;font-variant-numeric:tabular-nums;}
   .stat span{font-size:.78rem;color:var(--ink-faint);}
+  @media (max-width:900px){ .stat-row{grid-template-columns:repeat(2,1fr);} .stat{padding:1rem .8rem;} .stat b{font-size:.95rem;letter-spacing:-.01em;} .stat span{font-size:.73rem;} }
 
   /* ---------- floating idle card animation ---------- */
   @keyframes floatCard{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
@@ -865,8 +866,12 @@
       <div class="stat-row">
         <div class="stat"><b data-count="2400" data-suffix="+">0</b><span>учеников</span></div>
         <div class="stat"><b data-count="30" data-suffix="">0</b><span>дней до первого дохода</span></div>
-        <div class="stat"><b data-count="2" data-suffix="">0</b><span>детей, работа из дома</span></div>
-        <div class="stat"><b>Из дома</b><span>без офиса и команды</span></div>
+        <div class="stat"><b>от 100 000 ₽</b><span>доход учениц в месяц</span></div>
+        <div class="stat"><b data-count="6" data-suffix=" мес">0</b><span>личного сопровождения</span></div>
+        <div class="stat"><b data-count="7" data-suffix=" дней">0</b><span>возврат без объяснений</span></div>
+        <div class="stat"><b>Навсегда</b><span>доступ к материалам и обновлениям</span></div>
+        <div class="stat"><b>Лично</b><span>проверяю домашние работы</span></div>
+        <div class="stat"><b>Официально</b><span>договор и чек от ИП</span></div>
       </div>
     </div>
   </div>
