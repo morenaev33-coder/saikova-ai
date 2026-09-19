@@ -551,6 +551,13 @@
   /* ---------- prices ---------- */
   .price-row{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin-top:.2rem;}
   .price{font-family:'Unbounded',sans-serif;font-size:1.5rem;font-weight:600;color:var(--ink);}
+  .price-old{font-size:.85rem;color:var(--ink-faint);text-decoration:line-through;}
+  .price-save{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:#1a1230;background:var(--accent-2);border-radius:999px;padding:.28rem .55rem;}
+  .proof{margin-top:1rem;padding:.85rem 1rem;border-left:2px solid var(--accent);background:rgba(var(--accent-rgb),.08);font-size:.86rem;color:var(--ink-dim);}
+  .proof b{color:var(--ink);font-weight:700;}
+  .value-note{max-width:720px;margin:-1.4rem auto 2.2rem;text-align:center;color:var(--ink-dim);font-size:.95rem;}
+  .installment-link{display:block;margin-top:.65rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--accent-2);text-decoration:none;}
+  .installment-link:hover{text-decoration:underline;}
   .price-note{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--ink-faint);}
   .btn-block{width:100%;justify-content:center;text-align:center;margin-top:.9rem;}
   .exhibit-note{margin-top:1.8rem;font-size:.85rem;color:var(--ink-faint);text-align:center;}
@@ -888,33 +895,41 @@
         <div class="exhibit-tag">Экспонат I · Обучение</div>
         <h3>Нейрофотосессии</h3>
         <p>Научу вас делать нейрофотосессии самостоятельно: без фотографа и студии вы загружаете свои фото и получаете готовые образы в разных локациях и стилях. Обучение с помощником-ботом — он ведёт вас по шагам.</p>
-        <div class="price-row"><span class="price">1 490 ₽</span><span class="price-note">рассрочка без переплат</span></div>
+        <div class="price-row"><span class="price">1 490 ₽</span><span class="price-old">2 990 ₽</span><span class="price-save">−50%</span></div>
         <div class="format"><span>обучение + бот</span><span>доступ навсегда</span></div>
+        <p class="proof"><b>На выходе:</b> 10 готовых образов для профиля или карточек товара без студии и фотографа.</p>
         <a class="btn btn-primary btn-block" data-pay="neurophoto" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Оплатить 1 490 ₽</a>
+        <a class="installment-link" data-installment="neurophoto" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Оплатить от 500 ₽/мес. без переплат*</a>
       </article>
       <article class="exhibit" style="--glow:rgba(var(--accent-rgb),.45)">
         <div class="exhibit-tag">Экспонат II · Курс</div>
         <h3>ИИ мультики с нуля</h3>
         <p>Проведу вас от идеи до готового мультфильма на нейросетях — даже если вы никогда не рисовали. 16 уроков, домашние работы проверяю лично, в конце — именной сертификат.</p>
-        <div class="price-row"><span class="price">5 900 ₽</span><span class="price-note">рассрочка без переплат</span></div>
+        <div class="price-row"><span class="price">5 900 ₽</span><span class="price-old">9 900 ₽</span><span class="price-save">−40%</span></div>
         <div class="format"><span>16 уроков</span><span>доступ навсегда</span></div>
+        <p class="proof"><b>На выходе:</b> первый мультфильм от идеи до публикации, сценарий, раскадровка и готовый файл.</p>
         <a class="btn btn-primary btn-block" data-pay="cartoons" href="https://b2b.cbrpay.ru/AS1B001RDFFS5G7L9UGP4PSJ1SPUU878" target="_blank" rel="noopener">Оплатить 5 900 ₽</a>
+        <a class="installment-link" data-installment="cartoons" href="https://b2b.cbrpay.ru/AS1B001RDFFS5G7L9UGP4PSJ1SPUU878" target="_blank" rel="noopener">Оплатить от 990 ₽/мес. без переплат*</a>
       </article>
       <article class="exhibit" style="--glow:rgba(var(--accent-2-rgb),.5)">
         <div class="exhibit-tag">Экспонат III · Пакет</div>
         <h3>ИИ мультики + фото/видео</h3>
         <p>Отдаю два своих курса в одном пакете: мультфильмы на нейросетях плюс продающий фото- и видеоконтент. Вместе заметно выгоднее, чем покупать по отдельности.</p>
-        <div class="price-row"><span class="price">13 900 ₽</span><span class="price-note">рассрочка без переплат</span></div>
+        <div class="price-row"><span class="price">13 900 ₽</span><span class="price-old">19 800 ₽</span><span class="price-save">−30%</span></div>
         <div class="format"><span>два курса</span><span>доступ навсегда</span></div>
+        <p class="proof"><b>На выходе:</b> портфолио из мультфильма и серии фото/видео, которые можно показать клиенту и продавать как услугу.</p>
         <a class="btn btn-primary btn-block" data-pay="bundle" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Оплатить 13 900 ₽</a>
+        <a class="installment-link" data-installment="bundle" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Оплатить от 1 190 ₽/мес. без переплат*</a>
       </article>
       <article class="exhibit" style="--glow:rgba(var(--accent-rgb),.4)">
         <div class="exhibit-tag">Экспонат IV · Внедрение</div>
         <h3>Внедрение ИИ в действующий бизнес</h3>
         <p>Возьму ваш бизнес и вместе с вами встрою нейросети в реальные процессы: контент, продажи, ответы клиентам, рутина. Работаем лично, под ваши задачи и вашу нишу.</p>
-        <div class="price-row"><span class="price">29 900 ₽</span><span class="price-note">рассрочка без переплат</span></div>
+        <div class="price-row"><span class="price">29 900 ₽</span><span class="price-old">49 900 ₽</span><span class="price-save">−40%</span></div>
         <div class="format"><span>гибкий график</span><span>доступ навсегда</span></div>
+        <p class="proof"><b>На выходе:</b> карта процессов, 3 автоматизированных сценария и набор шаблонов под ваш бизнес.</p>
         <a class="btn btn-primary btn-block" data-pay="business" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Оплатить 29 900 ₽</a>
+        <a class="installment-link" data-installment="business" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Оплатить от 2 490 ₽/мес. без переплат*</a>
       </article>
       <article class="exhibit exhibit-flagship" style="--glow:rgba(var(--accent-rgb),.55)">
         <div class="exhibit-badge">ХИТ ЭКСПОЗИЦИИ</div>
@@ -936,13 +951,16 @@
           </div>
         </div>
         <div class="flagship-foot">
-          <div class="price-row"><span class="price">99 000 ₽</span><span class="price-note">рассрочка без переплат</span></div>
+          <div class="price-row"><span class="price">99 000 ₽</span><span class="price-old">149 000 ₽</span><span class="price-save">−34%</span></div>
           <div class="format"><span>6 месяцев</span><span>доступ навсегда</span><span>мест в потоке ограниченно</span></div>
         </div>
+        <p class="proof"><b>На выходе:</b> рабочая система Авито + ИИ, первые объявления и сопровождение до первых заявок. Доход не гарантируется.</p>
         <a class="btn btn-primary btn-block flagship-cta" data-pay="avito" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Оплатить 99 000 ₽</a>
+        <a class="installment-link" data-installment="avito" href="https://t.me/Profi_vk_avito" target="_blank" rel="noopener">Оплатить от 2 900 ₽/мес. без переплат*</a>
       </article>
     </div>
-    <p class="exhibit-note">Доступ открывается сразу после оплаты · рассрочка через Т‑Pay / Долями и ЮKassa · договор и чек.</p>
+    <p class="value-note">Скидка показана от обычной цены соответствующего формата. Вы заранее видите не только стоимость, но и конкретный результат, который забираете с собой.</p>
+    <p class="exhibit-note">Оплата картой или через СБП · договор и чек · доступ и порядок активации указаны на странице успешной оплаты.<br>* Рассрочка без переплат доступна, если её предлагает банк на странице выбранного тарифа; точный ежемесячный платёж зависит от срока.</p>
   </div>
 </section>
 
@@ -1622,17 +1640,26 @@
    Пока значение пустое (""), кнопка ведёт в Telegram, как раньше.
    ============================================================ */
 window.PAY_LINKS = {
-  neurophoto : "",   // I · Нейрофотосессии — 1 490 ₽
+  neurophoto : "https://b2b.cbrpay.ru/BS1B003B02DS1I4M8CAOPDK68TGN8865",   // I · Нейрофотосессии — 1 490 ₽
   cartoons   : "https://b2b.cbrpay.ru/AS1B001RDFFS5G7L9UGP4PSJ1SPUU878",   // II · ИИ мультики с нуля — 5 900 ₽
-  bundle     : "",   // III · Мультики + фото/видео — 13 900 ₽
-  business   : "",   // IV · Внедрение ИИ в бизнес — 29 900 ₽
-  avito      : ""    // V · Профессия АВИТО + ИИ — 99 000 ₽
+  bundle     : "https://b2b.cbrpay.ru/AS1B003RRQTBAK9684EO62P2UAQIK221",   // III · Мультики + фото/видео — 13 900 ₽
+  business   : "https://b2b.cbrpay.ru/BS1B001COA9DKVVQ80IO1J5UI34GVDAI",   // IV · Внедрение ИИ в бизнес — 29 900 ₽
+  avito      : "https://b2b.cbrpay.ru/BS1B003VKIP88VBH863P3G44E3S4RCSQ"    // V · Профессия АВИТО + ИИ — 99 000 ₽
 };
 (function(){
   var TG = "https://t.me/Profi_vk_avito";
   document.querySelectorAll("[data-pay]").forEach(function(a){
     var link = window.PAY_LINKS[a.dataset.pay];
-    a.href = link && link.trim() ? link.trim() : TG;
+    if(link && link.trim()){
+      a.href = link.trim();
+      return;
+    }
+    a.href = TG;
+    a.textContent = "Получить ссылку на оплату →";
+  });
+  document.querySelectorAll("[data-installment]").forEach(function(a){
+    var link = window.PAY_LINKS[a.dataset.installment];
+    if(link && link.trim()) a.href = link.trim();
   });
 })();
 </script>
